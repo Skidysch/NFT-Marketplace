@@ -2,11 +2,21 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
+  --main-font: "SpaceMono-Regular", sans-serif;
+  --main-font-bold: "SpaceMono-Bold", sans-serif;
+  --second-font: "WorkSans-Regular", sans-serif;
+  --second-font-semibold: "WorkSans-SemiBold", sans-serif;
+  --second-font-bold: "WorkSans-Bold", sans-serif;
   --content-width: 1170px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --light-color: #fff;
+  --background: #2b2b2b;
+  --background-secondary: #3b3b3b;
+  --caption-label-text: #858584;
+  --white-text: #fff;
+  --call-to-action: #a259ff;
+  --light-gradient: linear-gradient(149deg, #a259ff, #ff6250);
+  --dark-gradient: linear-gradient(170deg, #a259ff, #377df7);
 }
