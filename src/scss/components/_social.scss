@@ -1,0 +1,16 @@
+.social {
+  &__list {
+    gap: 10px;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform .3s ease-in-out;
+
+    @include hover {
+      transform: scale(1.2);
+    }
+  }
+}

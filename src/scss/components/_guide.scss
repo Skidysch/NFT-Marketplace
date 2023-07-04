@@ -1,0 +1,21 @@
+.guide {
+  &__item {
+    grid-column: 4 span;
+  }
+
+  & .card {
+    padding: 10px 30px 30px;
+
+    &__image {
+      width: 250px;
+      height: 250px;
+    }
+
+    &__title {
+      @include hover {
+        opacity: 1;
+        cursor: text;
+      }
+    }
+  }
+}

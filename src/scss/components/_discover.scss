@@ -1,0 +1,37 @@
+.discover {
+  &__list {
+    gap: 30px;
+  }
+
+  & .card {
+    padding: 0 30px 25px;
+
+    &__link {
+      margin: 0 -30px;
+    }
+
+    &__bottom {
+      gap: 5px;
+    }
+
+    &__author {
+      margin-bottom: 20px;
+    }
+
+    &__worth {
+      display: flex;
+      justify-content: space-between;
+      color: var(--caption-label-text);
+      font-size: 12px;
+      font-family: var(--second-font);
+      line-height: 110%;
+    }
+
+    &__cost,
+    &__bid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+}

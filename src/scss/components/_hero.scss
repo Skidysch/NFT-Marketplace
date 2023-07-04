@@ -1,0 +1,63 @@
+.hero {
+  &__left {
+    grid-column: 6 span;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    flex: 1 0 0;
+  }
+
+  &__right {
+    grid-column: 7 / 6 span;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--white-text);
+    font-size: 67px;
+    font-family: var(--main-font-semibold);
+    line-height: 110%;
+    text-transform: capitalize;
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: var(--white-text);
+    font-size: 22px;
+    font-family: var(--main-font);
+    line-height: 160%;
+    text-transform: capitalize;
+  }
+
+  &__list {
+    align-items: flex-start;
+    gap: 30px;
+    align-self: stretch;
+  }
+
+  &__stats {
+    flex-grow: 1;
+  }
+
+  &__digits {
+    margin: 0;
+
+    color: var(--white-text);
+    font-size: 28px;
+    font-family: var(--second-font-bold);
+    line-height: 140%;
+    text-transform: capitalize;
+  }
+
+  &__object {
+    margin: 0;
+
+    color: var(--white-text);
+    font-size: 24px;
+    font-family: var(--main-font);
+    line-height: 160%;
+    text-transform: capitalize;
+  }
+}

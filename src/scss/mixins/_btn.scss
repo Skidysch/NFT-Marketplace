@@ -1,0 +1,8 @@
+@mixin btn-before {
+  &::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    @content;
+  }
+}

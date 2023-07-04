@@ -1,0 +1,97 @@
+.collection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &__list {
+    height: 445px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  &__item {
+    grid-column: 1 span;
+    grid-row: 1 span;
+    border-radius: 20px;
+    overflow: hidden;
+
+    &--big {
+      grid-column: 3 span;
+      grid-row: 3 span;
+    }
+  }
+
+  &__link,
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image{
+    transform: scale(1.01);
+    transition: transform .6s ease-in-out, opacity .3s ease-in-out;
+
+    @include hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--call-to-action);
+    color: var(--white-text);
+    font-size: 22px;
+    font-family: var(--second-font-bold);
+    line-height: 160%;
+    text-transform: capitalize;
+    transition: opacity .6s ease-in-out;
+
+    @include hover {
+      opacity: .7;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 10px;
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--white-text);
+    font-size: 22px;
+    font-family: var(--main-font-semibold);
+    line-height: 140%;
+    text-transform: capitalize;
+    transition: opacity .3s ease-in-out;
+
+    @include hover {
+      opacity: .6;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    color: var(--white-text);
+    font-size: 16px;
+    font-family: var(--main-font);
+    line-height: 140%;
+  }
+
+  &__avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+}

@@ -5,6 +5,17 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/btn";
+@import "./components/card";
+@import "./components/collection";
+@import "./components/social";
 @import "./components/header";
 @import "./components/footer";
-
+@import "./components/hero";
+@import "./components/trending";
+@import "./components/rankings";
+@import "./components/categories";
+@import "./components/discover";
+@import "./components/highlight";
+@import "./components/guide";
+@import "./components/subscribe";

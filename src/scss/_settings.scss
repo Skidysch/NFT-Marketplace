@@ -10,7 +10,8 @@ html {
 
 .page {
   height: 100%;
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--main-font, sans-serif);
+  color: var(--white-text);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -19,6 +20,12 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  background-color: var(--background);
+}
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 img {
@@ -29,6 +36,11 @@ img {
 
 a {
   text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .site-container {
@@ -104,4 +116,55 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--offset);
+}
+
+.section {
+  &__inner {
+    padding: 60px;
+    border-radius: 20px;
+    background-color: var(--background-secondary);
+  }
+
+  &__header {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: flex-end;
+    gap: 100px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-grow: 1;
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--white-text);
+    font-size: 38px;
+    font-family: var(--main-font-semibold);
+    line-height: 120%;
+    text-transform: capitalize;
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: var(--white-text);
+    font-size: 22px;
+    font-family: var(--main-font);
+    line-height: 160%;
+    text-transform: capitalize;
+  }
 }

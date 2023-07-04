@@ -1,0 +1,100 @@
+.btn {
+  height: 60px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  background-color: var(--call-to-action);
+  color: var(--white-text);
+  text-align: center;
+  font-size: 16px;
+  font-family: var(--main-font-semibold);
+  line-height: 140%;
+  transition: opacity .3s ease-in-out, background .3s ease-in-out;
+
+  &--dark {
+    border: 2px solid var(--call-to-action);
+    background-color: var(--background);
+
+    @include hover {
+      background-color: var(--call-to-action);
+    }
+  }
+
+  &--light {
+    color: var(--background);
+    background-color: var(--white-text);
+
+    @include hover {
+      background-color: var(--background);
+      opacity: 1 !important;
+    }
+  }
+
+  &--header {
+    padding: 0 30px;
+
+    @include btn-before {
+      background-image: url('../img/user.svg');
+    }
+  }
+
+  &--user {
+    @include btn-before {
+      background-image: url('../img/user.svg');
+    }
+  }
+
+  &--rocket {
+    @include btn-before {
+      background-image: url('../img/rocket.svg');
+    }
+  }
+
+  &--eye {
+    @include btn-before {
+      background-image: url('../img/eye.svg');
+    }
+
+    &-dark {
+      @include btn-before {
+        background-image: url('../img/eye-dark.svg');
+      }
+
+      @include hover {
+        @include btn-before {
+          background-image: url('../img/eye.svg');
+        }
+      }
+    }
+  }
+
+  &--envelop {
+    @include btn-before {
+      background-image: url('../img/envelope.svg');
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @include hover {
+    opacity: .7;
+    color: var(--white-text) !important;
+  }
+
+  &:active {
+    opacity: .7;
+    background-color: var(--light-gradient) !important;
+  }
+}
+
+.btn.focus-visible {
+  outline: 2px solid var(--call-to-action);
+  outline-offset: 3px;
+  border-radius: 20px;
+  opacity: .8;
+}

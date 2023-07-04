@@ -1,0 +1,14 @@
+.categories {
+  &__list {
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  &__item {
+    grid-column: 3 span;
+
+    & .card__image {
+      filter: blur(7.5px);
+    }
+  }
+}
