@@ -9,6 +9,51 @@
     height: 100%;
     transition: transform .3s ease-in-out;
 
+    & .discord {
+      @include hover {
+        path {
+          fill: #7289DA;
+        }
+      }
+    }
+
+    & .youtube {
+      @include hover {
+        .red {
+          fill: #c4302b;
+        }
+
+        .white {
+          fill: #fff;
+        }
+      }
+    }
+
+    & .twitter {
+      @include hover {
+        path {
+          stroke: #00acee;
+        }
+      }
+    }
+
+    & .instagram {
+
+      @include hover {
+        path {
+          fill: url(#insta-gradient);
+        }
+      }
+    }
+
+    & .globe {
+      @include hover {
+        path {
+          fill: var(--light-gradient)
+        }
+      }
+    }
+
     @include hover {
       transform: scale(1.2);
     }

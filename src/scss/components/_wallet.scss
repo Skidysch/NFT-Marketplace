@@ -1,0 +1,23 @@
+.wallet {
+  margin-top: 100px;
+  padding: 0;
+
+  & .container {
+    padding: 0;
+    gap: 60px;
+    align-items: center;
+  }
+
+  &__list {
+    width: 320px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-family: var(--main-font-semibold);
+    line-height: 140%;
+    text-transform: capitalize;
+  }
+}

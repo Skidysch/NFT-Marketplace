@@ -71,10 +71,10 @@
     font-family: var(--main-font-semibold);
     line-height: 140%;
     text-transform: capitalize;
-    transition: opacity .3s ease-in-out;
+    transition: color .3s ease-in-out;
 
     @include hover {
-      opacity: .6;
+      color: var(--light-gradient);
     }
   }
 
@@ -93,5 +93,10 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
+    transition: border-radius .6s ease-in-out;
+
+    @include hover {
+      border-radius: 0;
+    }
   }
 }

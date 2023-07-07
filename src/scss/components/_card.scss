@@ -55,11 +55,11 @@
     font-family: var(--main-font-semibold);
     line-height: 140%;
     text-transform: capitalize;
-    transition: opacity .3s ease-in-out;
+    transition: color .3s ease-in-out;
     cursor: pointer;
 
     @include hover {
-      opacity: .6;
+      color: var(--light-gradient);
     }
   }
 
@@ -112,6 +112,22 @@
     font-size: 16px;
     font-family: var(--main-font);
     line-height: 140%;
+  }
+
+  &__worth {
+    display: flex;
+    justify-content: space-between;
+    color: var(--caption-label-text);
+    font-size: 12px;
+    font-family: var(--second-font);
+    line-height: 110%;
+  }
+
+  &__cost,
+  &__bid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   &--autoheight {

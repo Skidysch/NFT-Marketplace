@@ -1,0 +1,145 @@
+.nft {
+  margin-top: 100px;
+  padding: 0;
+
+  &__overview {
+    .container {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      gap: 150px;
+    }
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+  }
+
+  &__paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__name {
+    margin: 0;
+    color: var(--white-text);
+    font-size: 51px;
+    font-family: var(--main-font-semibold);
+    line-height: 110%;
+    text-transform: capitalize;
+  }
+
+  &__date {
+    margin: 0;
+    color: var(--caption-label-text);
+    font-size: 22px;
+    font-family: var(--main-font);
+    line-height: 160%;
+    text-transform: capitalize;
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--caption-label-text);
+    font-size: 22px;
+    font-family: var(--second-font-bold);
+    line-height: 160%;
+    text-transform: capitalize;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    transition: border-radius .6s ease-in-out;
+
+    @include hover {
+      border-radius: 0;
+    }
+  }
+
+  &__creator {
+    margin: 0;
+    color: var(--white-text);
+    font-size: 22px;
+    font-family: var(--main-font-semibold);
+    line-height: 140%;
+    text-transform: capitalize;
+  }
+
+  &__descr {
+    margin: 0;
+    color: var(--white-text);
+    font-size: 22px;
+    font-family: var(--main-font);
+    line-height: 160%;
+  }
+
+  &__link {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    color: var(--white-text);
+    font-size: 22px;
+    font-family: var(--main-font);
+    line-height: 160%;
+    transition: color .3s ease-in-out;
+
+    & .globe {
+      path {
+        fill: var(--caption-label-text);
+        transition: fill .3s ease-in-out;
+      }
+    }
+
+    @include hover {
+      color: var(--light-gradient);
+
+      & .globe {
+        path {
+          fill: var(--light-gradient);
+        }
+      }
+    }
+  }
+
+  &__tags-list {
+    gap: 20px;
+  }
+
+  &__tags-item {
+    border-radius: 20px;
+    background-color: var(--background-secondary);
+    overflow: hidden;
+  }
+
+  &__tags-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 12px 30px;
+    color: var(--white-text);
+    font-size: 16px;
+    font-family: var(--main-font-semibold);
+    line-height: 140%;
+    text-transform: uppercase;
+    transition: background .3s ease-in-out;
+
+    @include hover {
+      background-color: var(--call-to-action);
+    }
+  }
+
+  & .section__left {
+    gap: 30px;
+  }
+
+  & .highlight__right {
+    background-color: var(--background-secondary);
+  }
+}

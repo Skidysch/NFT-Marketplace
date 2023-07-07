@@ -1,0 +1,61 @@
+.form {
+  width: 100%;
+  position: relative;
+
+  &__input {
+    height: 60px;
+    width: 100%;
+    padding: 16px 180px 16px 20px;
+    color: var(--background);
+    background-color: var(--white-text);
+    border-radius: 20px;
+    outline: none;
+
+    &::placeholder {
+      color: var(--background-secondary);
+      font-size: 16px;
+      font-family: var(--main-font);
+      line-height: 140%;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 30px;
+  }
+
+  &--register {
+    width: 330px;
+
+    & .form__input {
+      height: 46px;
+      margin-bottom: 15px;
+      padding: 16px 20px 16px 52px;
+      border: 1px solid var(--caption-label-text);
+      display: block;
+    }
+
+    & .form__btn {
+      position: relative;
+      width: 100%;
+      height: 46px;
+      margin-top: 15px;
+    }
+
+    & .form__item {
+      position: relative;
+    }
+
+    & .form__icon {
+      path {
+        fill: var(--caption-label-text)
+      }
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -1,4 +1,6 @@
 .hero {
+  margin-top: 100px;
+
   &__left {
     grid-column: 6 span;
     display: flex;
@@ -35,29 +37,5 @@
     align-items: flex-start;
     gap: 30px;
     align-self: stretch;
-  }
-
-  &__stats {
-    flex-grow: 1;
-  }
-
-  &__digits {
-    margin: 0;
-
-    color: var(--white-text);
-    font-size: 28px;
-    font-family: var(--second-font-bold);
-    line-height: 140%;
-    text-transform: capitalize;
-  }
-
-  &__object {
-    margin: 0;
-
-    color: var(--white-text);
-    font-size: 24px;
-    font-family: var(--main-font);
-    line-height: 160%;
-    text-transform: capitalize;
   }
 }

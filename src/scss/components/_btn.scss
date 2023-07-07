@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
+  border: 1px solid var(--call-to-action);
   border-radius: 20px;
   background-color: var(--call-to-action);
   color: var(--white-text);
@@ -12,14 +13,20 @@
   font-size: 16px;
   font-family: var(--main-font-semibold);
   line-height: 140%;
-  transition: opacity .3s ease-in-out, background .3s ease-in-out;
+  transition: background .3s ease-in-out,
+              color .3s ease-in-out,
+              border .3s ease-in-out,
+              opacity .3s ease-in-out;
 
   &--dark {
     border: 2px solid var(--call-to-action);
     background-color: var(--background);
+    color: var(--call-to-action);
 
     @include hover {
-      background-color: var(--call-to-action);
+      background-color: var(--light-gradient) !important;
+      border: 2px  solid var(--light-gradient);
+      color: var(--background) !important;
     }
   }
 
@@ -28,52 +35,159 @@
     background-color: var(--white-text);
 
     @include hover {
-      background-color: var(--background);
-      opacity: 1 !important;
+      color: var(--white-text) !important;
+      background-color: var(--light-gradient) !important;
+      border: 2px solid var(--white-text);
     }
   }
 
-  &--header {
-    padding: 0 30px;
+  &--large {
+    padding: 16px 20px 16px 40px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+  }
 
-    @include btn-before {
-      background-image: url('../img/user.svg');
-    }
+  &--mt20 {
+    margin-top: 20px;
+  }
+
+  &--p20 {
+    padding: 0 20px;
+  }
+
+  &--p30 {
+    padding: 0 30px;
   }
 
   &--user {
-    @include btn-before {
-      background-image: url('../img/user.svg');
+    path {
+      fill: var(--white-text);
+      transition: fill .3s ease-in-out;
+    }
+
+    @include hover {
+      path {
+        fill: var(--light-gradient);
+      }
     }
   }
 
   &--rocket {
-    @include btn-before {
-      background-image: url('../img/rocket.svg');
+    path {
+      fill: var(--white-text);
+      transition: fill .3s ease-in-out;
+    }
+
+    &--call {
+      path {
+        fill: var(--call-to-action);
+        transition: fill .3s ease-in-out;
+      }
+
+      @include hover {
+        path {
+          fill: var(--background);
+        }
+      }
+    }
+
+    @include hover {
+      path {
+        fill: var(--light-gradient);
+      }
     }
   }
 
   &--eye {
-    @include btn-before {
-      background-image: url('../img/eye.svg');
+    path {
+      fill: var(--white-text);
+      transition: fill .3s ease-in-out;
     }
 
-    &-dark {
-      @include btn-before {
-        background-image: url('../img/eye-dark.svg');
+    @include hover {
+      path {
+        fill: var(--light-gradient);
+      }
+    }
+
+    &--call {
+      path {
+        fill: var(--call-to-action);
+        transition: fill .3s ease-in-out;
       }
 
       @include hover {
-        @include btn-before {
-          background-image: url('../img/eye.svg');
+        path {
+          fill: var(--background);
+        }
+      }
+    }
+
+    &--dark {
+      path {
+        fill: var(--background);
+        transition: fill .3s ease-in-out;
+      }
+
+      @include hover {
+        path {
+          fill: var(--white-text);
         }
       }
     }
   }
 
-  &--envelop {
-    @include btn-before {
-      background-image: url('../img/envelope.svg');
+  &--envelope {
+    path {
+      fill: var(--white-text);
+      transition: fill .3s ease-in-out;
+    }
+
+    @include hover {
+      path {
+        fill: var(--light-gradient);
+      }
+    }
+  }
+
+  &--copy {
+    path {
+      fill: var(--white-text);
+      transition: fill .3s ease-in-out;
+    }
+
+    @include hover {
+      cursor: copy;
+      path {
+        fill: var(--light-gradient);
+      }
+    }
+  }
+
+  &--plus {
+    path {
+      fill: var(--call-to-action);
+      transition: fill .3s ease-in-out;
+    }
+
+    @include hover {
+      path {
+        fill: var(--background);
+      }
+    }
+  }
+
+  &--arrow-right {
+    path {
+      fill: var(--call-to-action);
+      transition: fill .3s ease-in-out;
+    }
+
+    @include hover {
+      path {
+        fill: var(--background)
+      }
     }
   }
 
@@ -82,13 +196,12 @@
   }
 
   @include hover {
-    opacity: .7;
-    color: var(--white-text) !important;
+    color: var(--light-gradient);
+    background-color: var(--background);
   }
 
   &:active {
-    opacity: .7;
-    background-color: var(--light-gradient) !important;
+    background-color: var(--light-gradient);
   }
 }
 

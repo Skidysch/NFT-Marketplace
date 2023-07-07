@@ -1,5 +1,6 @@
 .highlight {
   padding: 0;
+
   & .container {
     height: 640px;
     padding-top: 60px;
@@ -48,10 +49,11 @@
     font-size: 16px;
     font-family: var(--main-font);
     line-height: 140%;
-    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, background .3s ease-in-out;
 
     @include hover {
       transform: scale(1.05);
+      background-color: var(--light-gradient);
     }
   }
 

@@ -1,0 +1,33 @@
+.register {
+  margin-top: 100px;
+  padding: 0;
+
+  & .container {
+    padding: 0;
+    gap: 60px;
+    align-items: center;
+  }
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--white-text);
+    font-size: 51px;
+    font-family: var(--main-font-semibold);
+    line-height: 110%;
+    text-transform: capitalize;
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: var(--white-text);
+    font-size: 22px;
+    font-family: var(--main-font);
+    line-height: 160%;
+    text-transform: capitalize;
+  }
+}

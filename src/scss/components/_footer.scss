@@ -1,4 +1,6 @@
 .footer {
+  clear: both;
+  
   & .container {
     background-color: var(--background-secondary);
     padding-top: 40px;
@@ -51,10 +53,27 @@
     font-size: 16px;
     font-family: var(--main-font);
     line-height: 140%;
+
+  }
+
+  &__link {
+    transition: color .3s ease-in-out;
+
+    @include hover {
+      color: var(--light-gradient);
+    }
   }
 
   &__bottom {
     padding-top: 20px;
     border-top: 1px solid var(--caption-label-text);
+  }
+
+  &__copy {
+    margin: 0;
+    color: #ccc;
+    font-size: 12px;
+    font-family: var(--main-font);
+    line-height: 110%;
   }
 }
