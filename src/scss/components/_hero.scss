@@ -38,4 +38,8 @@
     gap: 30px;
     align-self: stretch;
   }
+
+  & .card__author {
+    margin-bottom: 0; 
+  }
 }

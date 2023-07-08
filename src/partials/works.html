@@ -1,27 +1,30 @@
 <section class="works">
   <div class="works__header container">
     <ul class="works__category-list list-reset flex">
-      <li class="works__category-item active">
+      <li data-id="Created" class="works__category-item active">
         <button class="works__category-link btn-reset">
           <p class="works__category-title">Created</p>
+          <p class="works__category-number">9</p>
         </button>
       </li>
-      <li class="works__category-item">
+      <li data-id="Owned" class="works__category-item">
         <button class="works__category-link btn-reset">
           <p class="works__category-title">Owned</p>
+          <p class="works__category-number">9</p>
         </button>
       </li>
-      <li class="works__category-item">
+      <li data-id="Collections" class="works__category-item">
         <button class="works__category-link btn-reset">
           <p class="works__category-title">Collections</p>
+          <p class="works__category-number">3</p>
         </button>
       </li>
-      <div class="indicator"></div>
     </ul>
   </div>
   <div class="works__main">
     <div class="container flex">
-      <ul id="created" class="works__list list-reset flex">
+      <!-- #Created -->
+      <ul id="Created" class="works__list list-reset flex active">
         <li class="works__item">
           <div class="card">
             <a href="nft-page.html" class="card__link">
@@ -184,23 +187,190 @@
             </div>
           </div>
         </li>
-      </ul> <!-- ./works__list -->
-      <ul id="collections" class="works__list list-reset flex">
+      </ul> <!-- ./#Created -->
+      <!-- #Owned -->
+      <ul id="Owned" class="works__list list-reset flex">
+        <li class="works__item">
+          <div class="card">
+            <a href="nft-page.html" class="card__link">
+              <img src="img/recommendations-1.png" srcset="img/recommendations-1_2x.png 2x" alt="NFT image" class="card__image">
+            </a>
+            <div class="card__bottom">
+              <a href="nft-page.html" class="card__title">Foxy Life</a>
+              <a class="card__author" href="artist.html">
+                <img class="card__avatar" src="img/avatar-20.png">
+                <p>Orbitian</p>
+              </a>
+              <div class="card__worth">
+                <div class="card__cost"><p>Price</p><span class="card__price">0.99 ETH</span></div>
+                <div class="card__bid"><p>Highest Bid</p><span class="card__price">0.09 wETH</span></div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="works__item">
+          <div class="card">
+            <a href="nft-page.html" class="card__link">
+              <img src="img/recommendations-2.png" srcset="img/recommendations-2_2x.png 2x" alt="NFT image" class="card__image">
+            </a>
+            <div class="card__bottom">
+              <a href="nft-page.html" class="card__title">Cat from future</a>
+              <a class="card__author" href="artist.html">
+                <img class="card__avatar" src="img/avatar-20.png">
+                <p>Orbitian</p>
+              </a>
+              <div class="card__worth">
+                <div class="card__cost"><p>Price</p><span class="card__price">0.88 ETH</span></div>
+                <div class="card__bid"><p>Highest Bid</p><span class="card__price">0.08 wETH</span></div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="works__item">
+          <div class="card">
+            <a href="nft-page.html" class="card__link">
+              <img src="img/recommendations-3.png" srcset="img/recommendations-3_2x.png 2x" alt="NFT image" class="card__image">
+            </a>
+            <div class="card__bottom">
+              <a href="nft-page.html" class="card__title">Psycho Dog</a>
+              <a class="card__author" href="artist.html">
+                <img class="card__avatar" src="img/avatar-20.png">
+                <p>Orbitian</p>
+              </a>
+              <div class="card__worth">
+                <div class="card__cost"><p>Price</p><span class="card__price">0.77 ETH</span></div>
+                <div class="card__bid"><p>Highest Bid</p><span class="card__price">0.07 wETH</span></div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="works__item">
+          <div class="card">
+            <a href="nft-page.html" class="card__link">
+              <img src="img/recommendations-4.png" srcset="img/recommendations-4_2x.png 2x" alt="NFT image" class="card__image">
+            </a>
+            <div class="card__bottom">
+              <a href="nft-page.html" class="card__title">Designer Bear</a>
+              <a class="card__author" href="artist.html">
+                <img class="card__avatar" src="img/avatar-20.png">
+                <p>Orbitian</p>
+              </a>
+              <div class="card__worth">
+                <div class="card__cost"><p>Price</p><span class="card__price">0.66 ETH</span></div>
+                <div class="card__bid"><p>Highest Bid</p><span class="card__price">0.06 wETH</span></div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="works__item">
+          <div class="card">
+            <a href="nft-page.html" class="card__link">
+              <img src="img/recommendations-5.png" srcset="img/recommendations-5_2x.png 2x" alt="NFT image" class="card__image">
+            </a>
+            <div class="card__bottom">
+              <a href="nft-page.html" class="card__title">Dancing Robot 0375</a>
+              <a class="card__author" href="artist.html">
+                <img class="card__avatar" src="img/avatar-20.png">
+                <p>Orbitian</p>
+              </a>
+              <div class="card__worth">
+                <div class="card__cost"><p>Price</p><span class="card__price">0.55 ETH</span></div>
+                <div class="card__bid"><p>Highest Bid</p><span class="card__price">0.05 wETH</span></div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="works__item">
+          <div class="card">
+            <a href="nft-page.html" class="card__link">
+              <img src="img/recommendations-6.png" srcset="img/recommendations-6_2x.png 2x" alt="NFT image" class="card__image">
+            </a>
+            <div class="card__bottom">
+              <a href="nft-page.html" class="card__title">Dancing Robot 0356</a>
+              <a class="card__author" href="artist.html">
+                <img class="card__avatar" src="img/avatar-20.png">
+                <p>Orbitian</p>
+              </a>
+              <div class="card__worth">
+                <div class="card__cost"><p>Price</p><span class="card__price">0.44 ETH</span></div>
+                <div class="card__bid"><p>Highest Bid</p><span class="card__price">0.04 wETH</span></div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="works__item">
+          <div class="card">
+            <a href="nft-page.html" class="card__link">
+              <img src="img/recommendations-7.png" srcset="img/recommendations-7_2x.png 2x" alt="NFT image" class="card__image">
+            </a>
+            <div class="card__bottom">
+              <a href="nft-page.html" class="card__title">Dancing Robot 0321</a>
+              <a class="card__author" href="artist.html">
+                <img class="card__avatar" src="img/avatar-20.png">
+                <p>Orbitian</p>
+              </a>
+              <div class="card__worth">
+                <div class="card__cost"><p>Price</p><span class="card__price">0.33 ETH</span></div>
+                <div class="card__bid"><p>Highest Bid</p><span class="card__price">0.03 wETH</span></div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="works__item">
+          <div class="card">
+            <a href="nft-page.html" class="card__link">
+              <img src="img/recommendations-8.png" srcset="img/recommendations-8_2x.png 2x" alt="NFT image" class="card__image">
+            </a>
+            <div class="card__bottom">
+              <a href="nft-page.html" class="card__title">Dancing Robot 0512</a>
+              <a class="card__author" href="artist.html">
+                <img class="card__avatar" src="img/avatar-20.png">
+                <p>Orbitian</p>
+              </a>
+              <div class="card__worth">
+                <div class="card__cost"><p>Price</p><span class="card__price">0.22 ETH</span></div>
+                <div class="card__bid"><p>Highest Bid</p><span class="card__price">0.02 wETH</span></div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="works__item">
+          <div class="card">
+            <a href="nft-page.html" class="card__link">
+              <img src="img/recommendations-9.png" srcset="img/recommendations-9_2x.png 2x" alt="NFT image" class="card__image">
+            </a>
+            <div class="card__bottom">
+              <a href="nft-page.html" class="card__title">Dancing Robot 0024</a>
+              <a class="card__author" href="artist.html">
+                <img class="card__avatar" src="img/avatar-20.png">
+                <p>Orbitian</p>
+              </a>
+              <div class="card__worth">
+                <div class="card__cost"><p>Price</p><span class="card__price">0.11 ETH</span></div>
+                <div class="card__bid"><p>Highest Bid</p><span class="card__price">0.01 wETH</span></div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul> <!-- ./#Owned -->
+      <!-- #Collections -->
+      <ul id="Collections" class="works__list list-reset flex">
+        <!-- Collection 1 -->
         <li class="collection">
           <div class="collection__top">
             <ul class="collection__list list-reset">
               <li class="collection__item collection__item--big">
-                <a class="collection__link" href="#">
+                <a class="collection__link" href="nft-page.html">
                   <img class="collection__image" src="img/collection-1-image-1.png" srcset="img/collection-1-image-1_2x.png 2x" alt="Collection image">
                 </a>
               </li>
               <li class="collection__item">
-                <a class="collection__link" href="#">
+                <a class="collection__link" href="nft-page.html">
                   <img class="collection__image" src="img/collection-1-image-2.png" srcset="img/collection-1-image-2_2x.png 2x" alt="Collection image">
                 </a>
               </li>
               <li class="collection__item">
-                <a class="collection__link" href="#">
+                <a class="collection__link" href="nft-page.html">
                   <img class="collection__image" src="img/collection-1-image-3.png" srcset="img/collection-1-image-3_2x.png 2x" alt="Collection image">
                 </a>
               </li>
@@ -219,21 +389,22 @@
             </a>
           </div>
         </li> <!-- ./collection -->
+        <!-- Collection 2 -->
         <li class="collection">
           <div class="collection__top">
             <ul class="collection__list list-reset">
               <li class="collection__item collection__item--big">
-                <a class="collection__link" href="#">
+                <a class="collection__link" href="nft-page.html">
                   <img class="collection__image" src="img/collection-2-image-1.png" srcset="img/collection-2-image-1_2x.png 2x" alt="Collection image">
                 </a>
               </li>
               <li class="collection__item">
-                <a class="collection__link" href="#">
+                <a class="collection__link" href="nft-page.html">
                   <img class="collection__image" src="img/collection-2-image-2.png" srcset="img/collection-2-image-2_2x.png 2x" alt="Collection image">
                 </a>
               </li>
               <li class="collection__item">
-                <a class="collection__link" href="#">
+                <a class="collection__link" href="nft-page.html">
                   <img class="collection__image" src="img/collection-2-image-3.png" srcset="img/collection-2-image-3_2x.png 2x" alt="Collection image">
                 </a>
               </li>
@@ -252,21 +423,22 @@
             </a>
           </div>
         </li> <!-- ./collection -->
+        <!-- Collection 3 -->
         <li class="collection">
           <div class="collection__top">
             <ul class="collection__list list-reset">
               <li class="collection__item collection__item--big">
-                <a class="collection__link" href="#">
+                <a class="collection__link" href="nft-page.html">
                   <img class="collection__image" src="img/collection-3-image-1.png" srcset="img/collection-3-image-1_2x.png 2x" alt="Collection image">
                 </a>
               </li>
               <li class="collection__item">
-                <a class="collection__link" href="#">
+                <a class="collection__link" href="nft-page.html">
                   <img class="collection__image" src="img/collection-3-image-2.png" srcset="img/collection-3-image-2_2x.png 2x" alt="Collection image">
                 </a>
               </li>
               <li class="collection__item">
-                <a class="collection__link" href="#">
+                <a class="collection__link" href="nft-page.html">
                   <img class="collection__image" src="img/collection-3-image-3.png" srcset="img/collection-3-image-3_2x.png 2x" alt="Collection image">
                 </a>
               </li>
@@ -285,7 +457,7 @@
             </a>
           </div>
         </li> <!-- ./collection -->
-      </ul> <!-- ./works__list -->
+      </ul> <!-- ./#Collections -->
     </div>
   </div>
 </section>

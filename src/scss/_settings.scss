@@ -204,3 +204,44 @@ p {
   }
 }
 
+.search {
+  width: 100%;
+  height: 60px;
+  padding: 12px 0 12px 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--background-secondary);
+  border-radius: 20px;
+
+  &__input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--white-text);
+
+    &:placeholder {
+      color: var(--caption-label-text);
+      font-size: 16px;
+      font-family: var(--main-font);
+      line-height: 140%;
+    }
+  }
+
+  &__link {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--call-to-action);
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+
+    @include hover {
+      opacity: .8;
+    }
+  }
+}

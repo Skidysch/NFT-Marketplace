@@ -1,0 +1,144 @@
+.ratings {
+  &__header {
+    margin-top: 100px;
+
+    & .section__left {
+      gap: 20px;
+    }
+  }
+
+  &__main {
+    padding: 0;
+  }
+
+  &__table {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 20px;
+    flex-direction: column;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+    &.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    &-header {
+      width: 100%;
+      height: 46px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-radius: 20px;
+      border: 1px solid var(--background-secondary);
+      color: var(--caption-label-text);
+      font-size: 16px;
+      font-family: var(--second-font);
+      line-height: 140%;
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-row {
+      width: 100%;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-radius: 20px;
+      background: var(--background-secondary);
+      color: var(-white-text);
+      font-size: 16px;
+      font-family: var(--second-font);
+      line-height: 140%;
+    }
+  }
+
+  &__header-rank,
+  &__rank {
+    width: 30px;
+    flex-shrink: 0;
+  }
+
+  &__header-artist {
+    width: 380px;
+    flex-shrink: 0;
+    text-align: left;
+  }
+
+  &__header-change,
+  &__header-sales,
+  &__header-volume {
+    width: 100%;
+    text-align: left;
+  }
+
+  &__rank {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--caption-label-text);
+  }
+
+  &__artist {
+    width: 380px;
+    flex-shrink: 0;
+  }
+
+  &__link {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__avatar {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: border-radius .3s ease-in-out;
+
+    @include hover {
+      border-radius: 0;
+    }
+  }
+
+  &__name {
+    color: var(--white-text);
+    font-family: var(--main-font-semibold);
+    line-height: 140%;
+    text-transform: capitalize;
+    transition: color .3s ease-in-out;
+
+    @include hover {
+      color: var(--light-gradient);
+    }
+  }
+
+  &__change {
+    &--plus {
+      color: #00AC4F;
+    }
+
+    &--minus {
+      color: #FFE500;
+    }
+  }
+
+  &__change,
+  &__sales,
+  &__volume {
+    width: 100%;
+    text-align: left;
+  }
+}

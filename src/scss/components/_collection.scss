@@ -87,6 +87,11 @@
     font-size: 16px;
     font-family: var(--main-font);
     line-height: 140%;
+    transition: color .3s ease-in-out;
+
+    @include hover {
+      color: var(--call-to-action);
+    }
   }
 
   &__avatar {
