@@ -2,9 +2,18 @@
   &__header {
     margin-top: 100px;
 
+    & .section__header {
+      margin-bottom: 0;
+    }
+
     & .section__left {
       gap: 20px;
     }
+  }
+
+  &__inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   &__main {
@@ -12,16 +21,15 @@
   }
 
   &__table {
-    margin-top: 40px;
-    margin-bottom: 40px;
     gap: 20px;
     flex-direction: column;
-    display: none;
+    display: flex;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    max-height: 0;
+    transition: opacity .6s ease-in-out, max-height .6s ease-in-out;
 
     &.active {
-      display: flex;
+      max-height: 100%;
       opacity: 1;
     }
 
@@ -106,11 +114,6 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    transition: border-radius .3s ease-in-out;
-
-    @include hover {
-      border-radius: 0;
-    }
   }
 
   &__name {
@@ -118,11 +121,6 @@
     font-family: var(--main-font-semibold);
     line-height: 140%;
     text-transform: capitalize;
-    transition: color .3s ease-in-out;
-
-    @include hover {
-      color: var(--light-gradient);
-    }
   }
 
   &__change {

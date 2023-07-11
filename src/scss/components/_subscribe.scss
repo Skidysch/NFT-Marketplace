@@ -6,6 +6,19 @@
     &__inner {
       align-items: center;
       gap: 80px;
+
+      @include mini-desktop {
+        gap: 30px;
+        align-items: flex-start;
+      }
+
+      @include mini-tablet {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        padding-bottom: 102px;
+        background-color: transparent;
+      }
     }
 
     &__header {
@@ -22,6 +35,10 @@
       align-items: flex-start;
       gap: 40px;
       flex-shrink: 0;
+
+      @include mini-desktop {
+        width: 300px;
+      }
     }
   }
 
@@ -30,5 +47,30 @@
     height: 310px;
     flex-grow: 1;
     border-radius: 20px;
+
+    @include mini-tablet {
+      width: 315px;
+      height: auto;
+    }
+  }
+
+  & .form__btn {
+    @include mini-desktop {
+     height: 46px;
+     width: 100%;
+     top: 62px;
+   }
+  }
+
+  & .form__input {
+    @include mini-desktop {
+      height: 46px;
+      padding-right: 20px;
+    }
+  }
+
+  @include mini-tablet {
+    padding: 0;
+    padding-top: 40px;
   }
 }

@@ -11,6 +11,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mini-desktop {
+      padding: 15px 50px;
+    }
+
+    @include small-tablet {
+      padding: 15px 30px;
+    }
   }
 
   &__logo {
@@ -34,6 +42,20 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    transition: transform .3s ease-in-out;
+
+    @include tablet {
+
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-radius: 20px;
+      background-color: var(--background-secondary);
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -200%);
+    }
   }
 
   &__item {
@@ -44,6 +66,10 @@
       & .nav__link::after {
         display: none;
       }
+    }
+
+    @include mini-desktop {
+      padding: 0;
     }
   }
 
@@ -85,6 +111,23 @@
     &:active {
       color: var(--light-gradient);
     }
+  }
+}
+
+.burger {
+  @include burger;
+  @include tablet {
+    display: block;
+  }
+}
+
+.menu--active {
+  text-align: center;
+  top: 80px;
+  transform: translate(-50%, 0);
+
+  @include mini-tablet {
+    padding: 30px;
   }
 }
 

@@ -26,6 +26,15 @@ html {
 section {
   padding-top: 80px;
   padding-bottom: 80px;
+
+  @include mini-desktop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include mini-tablet {
+    position: relative;
+  }
 }
 
 img {
@@ -101,6 +110,14 @@ p {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  @include mini-desktop {
+    padding: 0 72px;
+  }
+
+  @include small-tablet {
+    padding: 0 30px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -136,7 +153,11 @@ p {
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: var(--offset);
+  gap: var(--offset);
+
+  @include medium_tablet {
+    gap: 15px;
+  }
 }
 
 .section {
@@ -144,6 +165,10 @@ p {
     padding: 60px;
     border-radius: 20px;
     background-color: var(--background-secondary);
+
+    @include mini-desktop {
+      padding: 40px 30px;
+    }
   }
 
   &__header {
@@ -151,6 +176,14 @@ p {
     display: flex;
     align-items: flex-end;
     gap: 100px;
+
+    @include mini-desktop {
+      margin-bottom: 40px;
+    }
+
+    @include mini-tablet {
+      text-align: center;
+    }
   }
 
   &__left {
@@ -168,6 +201,10 @@ p {
     font-family: var(--main-font-semibold);
     line-height: 120%;
     text-transform: capitalize;
+
+    @include mini-desktop {
+      font-size: 28px;
+    }
   }
 
   &__subtitle {
@@ -177,6 +214,10 @@ p {
     font-family: var(--main-font);
     line-height: 160%;
     text-transform: capitalize;
+
+    @include mini-desktop {
+      font-size: 16px;
+    }
   }
 }
 
@@ -191,6 +232,10 @@ p {
     font-family: var(--second-font-bold);
     line-height: 140%;
     text-transform: capitalize;
+
+    @include mini-desktop {
+      font-size: 22px;
+    }
   }
 
   &__title {
@@ -201,6 +246,10 @@ p {
     font-family: var(--main-font);
     line-height: 160%;
     text-transform: capitalize;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
   }
 }
 

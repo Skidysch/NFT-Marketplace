@@ -1,13 +1,40 @@
-.rankings {
+.creators {
   &__list {
     counter-reset: rank;
     grid-template-rows: repeat(3, 1fr);
-    gap: 30px;
+
+    @include big-tablet {
+      grid-template-rows: repeat(4, 1fr);
+    }
+    @include tablet {
+      grid-template-rows: repeat(6, 1fr);
+    }
+
+    @include mini-tablet {
+      margin-bottom: 100px;
+      grid-template-rows: repeat(12, 1fr);
+    }
   }
 
   &__item {
     grid-column: 3 span;
     grid-row: 1 span;
+
+    @include big-tablet {
+      grid-column: 4 span
+    }
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include mini-tablet {
+      grid-column: 12 span;
+    }
+  }
+
+  &__card {
+
     position: relative;
 
     &::before {
@@ -27,6 +54,14 @@
       font-size: 16px;
       font-family: var(--second-font);
       line-height: 140%;
+    }
+    
+    @include tablet {
+      flex-direction: row;
+    }
+
+    @include mini-tablet {
+      padding: 10px;
     }
   }
 }

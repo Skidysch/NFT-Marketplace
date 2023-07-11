@@ -1,6 +1,13 @@
 .trending {
   &__list {
     grid-template-columns: repeat(3, 1fr);
-    column-gap: var(--offset);
+
+    @include big-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include big-mobile {
+      grid-template-columns: auto;
+    }
   }
 }

@@ -8,10 +8,21 @@
     align-items: flex-start;
     gap: 30px;
     flex: 1 0 0;
+
+    @include mini-tablet {
+      grid-column: 12 span;
+      text-align: center;
+      margin-bottom: 25px;
+    }
   }
 
   &__right {
     grid-column: 7 / 6 span;
+
+    @include mini-tablet {
+      grid-column: 12 span;
+      margin-bottom: 200px;
+    }
   }
 
   &__title {
@@ -22,6 +33,18 @@
     font-family: var(--main-font-semibold);
     line-height: 110%;
     text-transform: capitalize;
+
+    @include mini-desktop {
+      font-size: 38px;
+    }
+
+    @include small-tablet {
+      font-size: 28px;
+    }
+
+    @include mini-tablet {
+      margin-bottom: 10px;
+    }
   }
 
   &__subtitle {
@@ -31,15 +54,35 @@
     font-family: var(--main-font);
     line-height: 160%;
     text-transform: capitalize;
+
+    @include mini-desktop {
+      font-size: 16px;
+      line-height: 140%;
+    }
   }
 
   &__list {
     align-items: flex-start;
     gap: 30px;
     align-self: stretch;
+
+    @include mini-tablet {
+      width: 100%;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      justify-content: space-evenly;
+    }
   }
 
   & .card__author {
-    margin-bottom: 0; 
+    margin-bottom: 0;
+  }
+
+  &__btn {
+    @include mini-tablet {
+      margin-bottom: 100px;
+    }
   }
 }

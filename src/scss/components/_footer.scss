@@ -1,6 +1,6 @@
 .footer {
   clear: both;
-  
+
   & .container {
     background-color: var(--background-secondary);
     padding-top: 40px;
@@ -27,6 +27,14 @@
     &:last-of-type {
       min-width: 40%;
     }
+
+    @include big-tablet {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__top {
@@ -35,6 +43,16 @@
     margin-bottom: 30px;
     justify-content: space-between;
     gap: 84px;
+
+    @include big-tablet {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    @include mini-tablet {
+      margin-bottom: 92px;
+    }
   }
 
   &__title {

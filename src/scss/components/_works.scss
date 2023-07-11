@@ -5,7 +5,7 @@
     height: 70px;
     border-top: 1px solid var(--background-secondary);
     border-bottom: 1px solid var(--background-secondary);
-    
+
     & .container {
       padding: 0 inherit;
     }
@@ -111,11 +111,13 @@
     row-gap: 30px;
     justify-content: space-between;
     opacity: 0;
-    transition: opacity .6s ease-in-out;
-    display: none;
+    max-height: 0;
+    transition: opacity .6s ease-in-out, max-height .6s ease-in-out;
+    display: flex;
 
     &.active {
       display: flex;
+      max-height: 100%;
       opacity: 1;
     }
   }

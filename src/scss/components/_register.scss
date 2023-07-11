@@ -2,10 +2,18 @@
   margin-top: 100px;
   padding: 0;
 
+  & .section__right {
+    padding: 100px 0;
+  }
+
   & .container {
     padding: 0;
     gap: 60px;
     align-items: center;
+  }
+
+  &__image {
+    height: 691px;
   }
 
   &__header {

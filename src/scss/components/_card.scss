@@ -50,6 +50,11 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: width .6s ease-in-out, height .6s ease-in-out;
+
+    @include tablet {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &__bottom {
@@ -57,6 +62,10 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
+
+    @include tablet {
+      text-align: left;
+    }
   }
 
   &__title {
@@ -96,8 +105,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    overflow: hidden;
-    transition: border-radius .6s ease-in-out;
+    transition: border-radius .3s ease-in-out;
 
     @include hover {
       border-radius: 0;
@@ -106,6 +114,11 @@
     &--big {
       width: 120px;
       height: 120px;
+
+      @include tablet {
+        width: 60px;
+        height: 60px;
+      }
     }
   }
 
@@ -114,6 +127,11 @@
     font-size: 16px;
     font-family: var(--main-font);
     line-height: 140%;
+
+    @include tablet {
+      display: flex;
+      gap: 5px;
+    }
   }
 
   &__price {
@@ -159,5 +177,10 @@
   &--centered {
     align-items: center;
     text-align: center;
+  }
+
+  @include mini-tablet {
+    max-width: 315px;
+    margin: 0 auto;
   }
 }

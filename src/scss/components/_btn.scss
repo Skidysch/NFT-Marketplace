@@ -58,6 +58,10 @@
 
   &--p30 {
     padding: 0 30px;
+
+    @include mini-desktop {
+      padding: 0 15px;
+    }
   }
 
   &--user {
@@ -70,6 +74,11 @@
       path {
         fill: var(--light-gradient);
       }
+    }
+
+    @include mini-tablet {
+      position: relative !important;
+      top: 0;
     }
   }
 
@@ -202,6 +211,14 @@
 
   &:active {
     background-color: var(--light-gradient);
+  }
+
+  @include mini-tablet {
+    position: absolute;
+    width: 315px;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

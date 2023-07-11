@@ -9,10 +9,8 @@ export const setActiveItem = () => {
       removeActiveClass();
       let activeItem = document.getElementById(item.dataset.id);
       item.classList.add('active');
-      activeItem.style.display = 'flex';
-      setTimeout(() => {
-        activeItem.classList.add('active');
-      }, 1);
+      activeItem.style.maxHeight = activeItem.scrollHeight + 'px';
+      activeItem.classList.add('active');
     });
   });
 }
@@ -22,11 +20,11 @@ const removeActiveClass = () => {
     item.classList.remove('active');
   });
   worksLists.forEach(item => {
+    item.style.maxHeight = 0;
     item.classList.remove('active');
-    item.style.display = 'none';
   });
   ratingsTables.forEach(item => {
+    item.style.maxHeight = 0;
     item.classList.remove('active');
-    item.style.display = 'none';
   });
 }

@@ -1,6 +1,32 @@
 .discover {
   &__list {
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include big-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mini-tablet {
+      margin-bottom: 100px;
+    }
+
+    @include big-mobile {
+      grid-template-columns: auto;
+    }
+  }
+
+  &__item {
+    @include big-tablet {
+      &:last-child {
+        display: none;
+      }
+    }
+
+    @include big-mobile {
+      &:last-child {
+        display: inherit;
+      }
+    }
   }
 
   & .card {

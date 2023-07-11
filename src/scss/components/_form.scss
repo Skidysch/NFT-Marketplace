@@ -5,7 +5,7 @@
   &__input {
     height: 60px;
     width: 100%;
-    padding: 16px 180px 16px 20px;
+    padding: 16px 150px 16px 20px;
     color: var(--background);
     background-color: var(--white-text);
     border-radius: 20px;
@@ -17,6 +17,11 @@
       font-family: var(--main-font);
       line-height: 140%;
     }
+
+    @include mini-tablet {
+      height: 46px;
+      padding-right: 20px;
+    }
   }
 
   &__btn {
@@ -24,6 +29,12 @@
     top: 0;
     right: 0;
     padding: 0 30px;
+
+    @include mini-tablet {
+      height: 46px;
+      width: 100%;
+      top: 62px;
+    }
   }
 
   &--register {
@@ -41,7 +52,7 @@
       position: relative;
       width: 100%;
       height: 46px;
-      margin-top: 15px;
+      margin-top: 30px;
     }
 
     & .form__item {

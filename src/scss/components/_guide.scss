@@ -1,14 +1,33 @@
 .guide {
   &__item {
     grid-column: 4 span;
+
+    @include mini-tablet {
+      grid-column: 12 span;
+    }
   }
 
   & .card {
     padding: 10px 30px 30px;
+    overflow: hidden;
 
-    &__image {
+    &__top {
       width: 250px;
       height: 250px;
+
+      @include mini-desktop {
+        width: 160px;
+        height: 160px;
+      }
+
+      @include mini-tablet {
+        display: none;
+      }
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
     }
 
     &__title {
@@ -16,6 +35,22 @@
         opacity: 1;
         cursor: text;
       }
+
+      @include big-tablet {
+        font-size: 16px;
+      }
+    }
+
+    &__text {
+      @include big-tablet {
+        font-size: 12px;
+      }
+    }
+
+    @include mini-tablet {
+      flex-direction: row;
+      padding: 20px;
+      justify-content: space-between;
     }
   }
 }
