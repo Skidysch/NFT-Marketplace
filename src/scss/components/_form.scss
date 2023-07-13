@@ -2,6 +2,18 @@
   width: 100%;
   position: relative;
 
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &:last-child {
+      margin-top: 30px;
+    }
+  }
+
   &__input {
     height: 60px;
     width: 100%;
@@ -20,20 +32,26 @@
 
     @include mini-tablet {
       height: 46px;
+      max-width: 315px;
       padding-right: 20px;
     }
   }
 
   &__btn {
-    position: absolute;
-    top: 0;
-    right: 0;
     padding: 0 30px;
+
+    &--inline {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
     @include mini-tablet {
       height: 46px;
-      width: 100%;
+      width: 315px;
       top: 62px;
+      right: 50%;
+      transform: translateX(50%);
     }
   }
 
@@ -42,21 +60,19 @@
 
     & .form__input {
       height: 46px;
-      margin-bottom: 15px;
       padding: 16px 20px 16px 52px;
       border: 1px solid var(--caption-label-text);
       display: block;
     }
 
     & .form__btn {
-      position: relative;
       width: 100%;
+      max-width: 315px;
       height: 46px;
-      margin-top: 30px;
-    }
 
-    & .form__item {
-      position: relative;
+      @include mini-tablet {
+        transform: translateX(0);
+      }
     }
 
     & .form__icon {
@@ -68,5 +84,9 @@
       left: 20px;
       transform: translateY(-50%);
     }
+  }
+
+  @include mini-tablet {
+    margin: 0 auto;
   }
 }

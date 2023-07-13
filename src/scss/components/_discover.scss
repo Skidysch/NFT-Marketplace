@@ -17,14 +17,16 @@
 
   &__item {
     @include big-tablet {
-      &:last-child {
+      display: flex;
+      &:nth-child(n+3) {
         display: none;
       }
     }
 
     @include big-mobile {
-      &:last-child {
-        display: inherit;
+      display: flex;
+      &:nth-child(n+2) {
+        display: none;
       }
     }
   }

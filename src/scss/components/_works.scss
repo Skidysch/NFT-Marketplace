@@ -71,6 +71,10 @@
     line-height: 140%;
     text-transform: capitalize;
     transition: color .6s ease-in-out;
+
+    @include mini-desktop {
+      font-size: 16px;
+    }
   }
 
   &__category-number {
@@ -81,7 +85,15 @@
     font-size: 16px;
     font-family: var(--second-font);
     line-height: 140%;
-    transition: background-color .6s ease-in-out;;
+    transition: background-color .6s ease-in-out;
+
+    @include mini-desktop {
+      font-size: 12px;
+    }
+
+    @include mini-tablet {
+      display: none;
+    }
   }
 
   &__category-title,
@@ -98,6 +110,16 @@
       padding-top: 80px;
       padding-bottom: 80px;
       background-color: var(--background-secondary);
+
+      @include tablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      @include mini-tablet {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
     }
 
     & .card {
@@ -108,17 +130,30 @@
   &__list {
     width: 1050px;
     flex-wrap: wrap;
+    justify-content: space-around;
     row-gap: 30px;
-    justify-content: space-between;
     opacity: 0;
     max-height: 0;
     transition: opacity .6s ease-in-out, max-height .6s ease-in-out;
-    display: flex;
 
     &.active {
-      display: flex;
       max-height: 100%;
       opacity: 1;
+    }
+  }
+
+  &__item,
+  & .collection {
+    @include small-desktop {
+      &:nth-child(n+7) {
+        display: none;
+      }
+    }
+
+    @include medium_tablet {
+      &:nth-child(n+4) {
+        display: none;
+      }
     }
   }
 }

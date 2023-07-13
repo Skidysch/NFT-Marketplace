@@ -46,6 +46,11 @@
     display: flex;
     justify-content: flex-start;
     gap: 20px;
+
+    @include mini-tablet {
+
+
+    }
   }
 
   &--mt20 {
@@ -211,14 +216,6 @@
 
   &:active {
     background-color: var(--light-gradient);
-  }
-
-  @include mini-tablet {
-    position: absolute;
-    width: 315px;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 

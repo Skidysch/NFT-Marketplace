@@ -13,7 +13,7 @@
 }
 
 @mixin small-desktop {
-  @media (max-width: (1101 px)) {
+  @media (max-width: (1101px)) {
     @content;
   }
 }
@@ -25,7 +25,7 @@
 }
 
 @mixin big-tablet {
-  @media (max-width: (900px)) {
+  @media (max-width: (901px)) {
     @content;
   }
 }

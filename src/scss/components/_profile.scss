@@ -1,6 +1,6 @@
 .profile {
   margin-top: 100px;
-  padding-bottom: 0;
+  padding: 0;
 
   &__cover {
     position: relative;
@@ -27,6 +27,12 @@
     padding-bottom: 40px;
     position: relative;
 
+    & .btn {
+      @include mini-tablet {
+        width: 315px;
+      }
+    }
+
     & .container {
       gap: 100px;
     }
@@ -38,6 +44,32 @@
     & .section__right {
       display: flex;
       gap: 20px;
+
+      @include mini-desktop {
+        position: absolute;
+        margin-top: 72px;
+      }
+
+      @include mini-tablet {
+        flex-direction: column;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    & .hero__list {
+      @include mini-desktop {
+        margin-top: 90px;
+      }
+
+      @include mini-tablet {
+        margin-top: 170px;
+      }
+    }
+
+    @include mini-desktop {
+      padding-top: 80px;
+      padding-bottom: 30px;
     }
   }
 
@@ -49,6 +81,11 @@
     border-radius: 20px;
     position: absolute;
     top: -70px;
+
+    @include mini-tablet {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__name {
@@ -58,6 +95,14 @@
     font-family: var(--main-font);
     line-height: 110%;
     text-transform: capitalize;
+
+    @include mini-desktop {
+      font-size: 38px;
+    }
+
+    @include mini-tablet {
+      text-align: center;
+    }
   }
 
   &__title {
@@ -69,6 +114,9 @@
     line-height: 160%;
     text-transform: capitalize;
 
+    @include mini-desktop {
+      font-size: 16px;
+    }
   }
 
   &__bio-descr {
@@ -77,6 +125,17 @@
     font-family: var(--main-font);
     line-height: 160%;
     text-transform: capitalize;
+
+    @include mini-desktop {
+      font-size: 16px;
+    }
   }
 
+  @include mini-desktop {
+    margin-top: 90px;
+  }
+
+  @include tablet {
+    margin-top: 62px;
+  }
 }

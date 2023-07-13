@@ -9,6 +9,14 @@
     & .section__left {
       gap: 20px;
     }
+
+    @include mini-desktop {
+      margin-top: 90px;
+    }
+
+    @include tablet {
+      margin-top: 62px;
+    }
   }
 
   &__inner {
@@ -38,6 +46,7 @@
       height: 46px;
       padding: 12px 20px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       gap: 20px;
       border-radius: 20px;
@@ -46,6 +55,10 @@
       font-size: 16px;
       font-family: var(--second-font);
       line-height: 140%;
+
+      @include big-mobile {
+        gap: 15px;
+      }
     }
 
     &-body {
@@ -58,6 +71,7 @@
       width: 100%;
       padding: 12px 20px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       gap: 20px;
       border-radius: 20px;
@@ -66,26 +80,50 @@
       font-size: 16px;
       font-family: var(--second-font);
       line-height: 140%;
+
+      @include big-mobile {
+        gap: 15px;
+      }
     }
   }
 
-  &__header-rank,
-  &__rank {
-    width: 30px;
-    flex-shrink: 0;
-  }
+  &__header {
 
-  &__header-artist {
-    width: 380px;
-    flex-shrink: 0;
-    text-align: left;
-  }
+    &-rank {
+      width: 30px;
+      flex-shrink: 0;
 
-  &__header-change,
-  &__header-sales,
-  &__header-volume {
-    width: 100%;
-    text-align: left;
+      @include tablet {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+      }
+    }
+
+    &-artist {
+      width: 380px;
+      flex-shrink: 0;
+      text-align: left;
+
+      @include tablet {
+        width: 366px;
+      }
+
+      @include mini-tablet {
+        width: 276px;
+      }
+
+      @include big-mobile {
+        width: 170px;
+      }
+    }
+
+    &-change,
+    &-sales,
+    &-volume {
+      width: 100%;
+      text-align: left;
+    }
   }
 
   &__rank {
@@ -93,20 +131,50 @@
     height: 30px;
     border-radius: 50%;
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
     background-color: var(--background);
     color: var(--caption-label-text);
+
+    @include tablet {
+      width: 24px;
+      height: 24px;
+      font-size: 12px;
+    }
   }
 
   &__artist {
     width: 380px;
     flex-shrink: 0;
+
+    @include tablet {
+      width: 366px;
+    }
+
+    @include mini-tablet {
+      width: 276px;
+    }
+
+    @include big-mobile {
+      width: 170px;
+    }
+  }
+
+  &__name {
+    @include mini-tablet {
+      font-size: 16px;
+    }
   }
 
   &__link {
+    width: 100%;
     display: flex;
     gap: 20px;
+    align-items: center;
+    @include tablet {
+      gap: 12px;
+    }
   }
 
   &__avatar {
@@ -114,6 +182,16 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
+
+    @include tablet {
+      width: 32px;
+      height: 32px;
+    }
+
+    @include mini-tablet {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &__name {
@@ -138,5 +216,19 @@
   &__volume {
     width: 100%;
     text-align: left;
+  }
+
+  &__header-sales,
+  &__sales {
+    @include mini-desktop {
+      display: none;
+    }
+  }
+
+  &__header-change,
+  &__change {
+    @include tablet {
+      display: none;
+    }
   }
 }

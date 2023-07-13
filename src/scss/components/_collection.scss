@@ -105,19 +105,8 @@
     }
   }
 
-  @include big-tablet {
-    &:last-child {
-      display: none;
-    }
-  }
-
   @include big-mobile {
-    display: none;
-
-    &:first-child {
-      display: flex;
-      width: 315px;
-      margin: 0 auto;
-    }
+    width: 315px;
+    margin: 0 auto;
   }
 }

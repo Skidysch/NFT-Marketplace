@@ -9,6 +9,14 @@
     & .section__subtitle {
       text-transform: none;
     }
+
+    @include mini-desktop {
+      margin-top: 90px;
+    }
+
+    @include tablet {
+      margin-top: 62px;
+    }
   }
 
   &__main {

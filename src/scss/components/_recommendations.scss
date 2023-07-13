@@ -1,7 +1,17 @@
 .recommendations {
+  & .section__header {
+    @include mini-tablet {
+      gap: 0;
+    }
+  }
+
   &__list {
     flex-wrap: wrap;
     row-gap: 60px;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
+    @include mini-tablet {
+      padding-bottom: 90px;
+    }
   }
 }

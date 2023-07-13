@@ -6,7 +6,39 @@
     .container {
       padding-top: 40px;
       padding-bottom: 40px;
-      gap: 150px;
+      gap: 100px;
+
+      @include desktop {
+        gap: 30px;
+      }
+
+      @include mini-tablet {
+        position: relative;
+      }
+    }
+
+    & .section__left {
+      width: 605px;
+      gap: 30px;
+
+      @include small-desktop {
+        width: 365px;
+      }
+
+      @include small-tablet {
+        gap: 20px;
+      }
+    }
+
+    & .section__right {
+      @include mini-tablet {
+        position: absolute;
+        top: 137px;
+      }
+    }
+
+    & .highlight__right {
+      background-color: var(--background-secondary);
     }
   }
 
@@ -28,6 +60,10 @@
     font-family: var(--main-font-semibold);
     line-height: 110%;
     text-transform: capitalize;
+
+    @include small-desktop {
+      font-size: 38px;
+    }
   }
 
   &__date {
@@ -37,6 +73,14 @@
     font-family: var(--main-font);
     line-height: 160%;
     text-transform: capitalize;
+
+    @include small-desktop {
+      font-size: 16px;
+    }
+
+    @include mini-tablet {
+      margin-bottom: 257px;
+    }
   }
 
   &__title {
@@ -46,6 +90,10 @@
     font-family: var(--second-font-bold);
     line-height: 160%;
     text-transform: capitalize;
+
+    @include small-desktop {
+      font-size: 16px;
+    }
   }
 
   &__author {
@@ -75,6 +123,10 @@
     @include hover {
       color: var(--call-to-action);
     }
+
+    @include small-desktop {
+      font-size: 16px;
+    }
   }
 
   &__descr {
@@ -83,6 +135,10 @@
     font-size: 22px;
     font-family: var(--main-font);
     line-height: 160%;
+
+    @include small-desktop {
+      font-size: 16px;
+    }
   }
 
   &__link {
@@ -95,10 +151,19 @@
     line-height: 160%;
     transition: color .3s ease-in-out;
 
+    @include small-desktop {
+      font-size: 16px;
+    }
+
     & .globe {
       path {
         fill: var(--caption-label-text);
         transition: fill .3s ease-in-out;
+      }
+
+      @include small-desktop {
+        width: 24px;
+        height: 24px;
       }
     }
 
@@ -115,6 +180,11 @@
 
   &__tags-list {
     gap: 20px;
+
+    @include small-desktop {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__tags-item {
@@ -140,11 +210,11 @@
     }
   }
 
-  & .section__left {
-    gap: 30px;
+  @include mini-desktop {
+    margin-top: 90px;
   }
 
-  & .highlight__right {
-    background-color: var(--background-secondary);
+  @include tablet {
+    margin-top: 62px;
   }
 }

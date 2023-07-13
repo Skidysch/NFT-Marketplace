@@ -10,4 +10,20 @@
       grid-template-columns: auto;
     }
   }
+
+  & .collection {
+    @include big-tablet {
+      display: flex;
+      &:nth-child(n+3) {
+        display: none;
+      }
+    }
+
+    @include big-mobile {
+      display: flex;
+      &:nth-child(n+2) {
+        display: none;
+      }
+    }
+  }
 }

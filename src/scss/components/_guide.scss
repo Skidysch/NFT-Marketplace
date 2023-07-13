@@ -1,4 +1,6 @@
 .guide {
+  border-bottom: 2px solid var(--background-secondary);
+
   &__item {
     grid-column: 4 span;
 

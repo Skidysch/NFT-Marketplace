@@ -2,22 +2,60 @@
   margin-top: 100px;
   padding: 0;
 
+  & .section__left {
+    @include mini-tablet {
+      width: 100%;
+    }
+  }
+
   & .section__right {
     padding: 100px 0;
+
+    @include mini-desktop {
+      padding: 80px 0;
+      padding-right: 5px;
+    }
+
+    @include mini-tablet {
+      padding: 0 30px 40px;
+    }
   }
 
   & .container {
     padding: 0;
     gap: 60px;
     align-items: center;
+
+    @include mini-desktop {
+      gap: 40px;
+    }
+
+    @include mini-tablet {
+      gap: 30px;
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__image {
-    height: 691px;
+    height: 697px;
+
+    @include mini-desktop {
+      height: 615px;
+    }
+
+    @include mini-tablet {
+      height: 232px;
+      min-width: 100%;
+    }
   }
 
   &__header {
     margin-bottom: 40px;
+
+    @include mini-tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
@@ -28,6 +66,10 @@
     font-family: var(--main-font-semibold);
     line-height: 110%;
     text-transform: capitalize;
+
+    @include mini-desktop {
+      font-size: 38px;
+    }
   }
 
   &__subtitle {
@@ -37,5 +79,17 @@
     font-family: var(--main-font);
     line-height: 160%;
     text-transform: capitalize;
+
+    @include mini-desktop {
+      font-size: 16px;
+    }
+  }
+
+  @include mini-desktop {
+    margin-top: 90px;
+  }
+
+  @include tablet {
+    margin-top: 62px;
   }
 }

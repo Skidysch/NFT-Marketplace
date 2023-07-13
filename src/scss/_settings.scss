@@ -219,6 +219,16 @@ p {
       font-size: 16px;
     }
   }
+
+  &__btn {
+    @include mini-tablet {
+      position: absolute;
+      width: 315px;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .stats {
@@ -247,7 +257,7 @@ p {
     line-height: 160%;
     text-transform: capitalize;
 
-    @include small-tablet {
+    @include mini-desktop {
       font-size: 16px;
     }
   }

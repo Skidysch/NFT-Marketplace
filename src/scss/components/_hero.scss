@@ -65,7 +65,8 @@
     align-items: flex-start;
     gap: 30px;
     align-self: stretch;
-
+  }
+  & .hero__list {
     @include mini-tablet {
       width: 100%;
       position: absolute;
@@ -84,5 +85,13 @@
     @include mini-tablet {
       margin-bottom: 100px;
     }
+  }
+
+  @include mini-desktop {
+    margin-top: 90px;
+  }
+
+  @include tablet {
+    margin-top: 62px;
   }
 }
