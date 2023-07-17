@@ -6,7 +6,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
     position: relative;
-    background-image: url('../img/highlight.png');
+    background-image: url('../img/highlight-desktop.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,8 +23,14 @@
       pointer-events: none;
     }
 
+    @include mini-desktop {
+      background-image: url('../img/highlight-tablet.webp');
+      height: 630px;
+    }
+
     @include mini-tablet {
-      height: 593px;
+      background-image: url('../img/highlight-mobile.webp');
+      height: 590px;
       padding-top: 40px;
       padding-bottom: 40px;
     }

@@ -30,12 +30,17 @@
     &__image {
       display: block;
       width: 100%;
+
+      @include hover {
+        transform: inherit;
+      }
     }
 
     &__title {
       @include hover {
         opacity: 1;
         cursor: text;
+        color: inherit;
       }
 
       @include big-tablet {
